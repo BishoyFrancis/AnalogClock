@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(4, 4, 31);
+    font-family: "Orbitron";
+    
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    float: left;
+    
+}
+
+.clock{
+    width: 600px;
+    height: 600px;
+    border: 5px solid white ;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 1%;
+}
+
+.clock::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 9px);
+    top: calc(50% - 9px);
+}
+
+
+.clock li{
+   list-style-type: none;
+}
+
+.clock--hour{
+    padding-top: 5px;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+.clock--hour{
+    --rotation:0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.clock--dash{
+    content: "";
+    border-radius: 5px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.clock--dash span{
+    content: "";
+    width: 5px;
+    height: 13px;
+    background-color: white;
+    position: absolute;
+}
+
+.dash1{transform: rotate(6deg);}
+.dash2{transform: rotate(12deg);}
+.dash3{transform: rotate(18deg);}
+.dash4{transform: rotate(24deg);}
+
+.dash5{transform: rotate(36deg);}
+.dash6{transform: rotate(42deg);}
+.dash7{transform: rotate(48deg);}
+.dash8{transform: rotate(54deg);}
+
+.dash9{transform: rotate(66deg);}
+.dash10{transform: rotate(72deg);}
+.dash11{transform: rotate(78deg);}
+.dash12{transform: rotate(84deg);}
+
+.dash13{transform: rotate(96deg);}
+.dash14{transform: rotate(102deg);}
+.dash15{transform: rotate(108deg);}
+.dash16{transform: rotate(114deg);}
+
+.dash17{transform: rotate(126deg);}
+.dash18{transform: rotate(132deg);}
+.dash19{transform: rotate(138deg);}
+.dash20{transform: rotate(144deg);}
+
+.dash21{transform: rotate(156deg);}
+.dash22{transform: rotate(162deg);}
+.dash23{transform: rotate(168deg);}
+.dash24{transform: rotate(174deg);}
+
+.dash25{transform: rotate(186deg);}
+.dash26{transform: rotate(192deg);}
+.dash27{transform: rotate(198deg);}
+.dash28{transform: rotate(204deg);}
+
+.dash29{transform: rotate(216deg);}
+.dash30{transform: rotate(222deg);}
+.dash31{transform: rotate(228deg);}
+.dash32{transform: rotate(234deg);}
+
+.dash33{transform: rotate(246deg);}
+.dash34{transform: rotate(252deg);}
+.dash35{transform: rotate(258deg);}
+.dash36{transform: rotate(264deg);}
+
+.dash37{transform: rotate(276deg);}
+.dash38{transform: rotate(282deg);}
+.dash39{transform: rotate(288deg);}
+.dash40{transform: rotate(294deg);}
+
+.dash41{transform: rotate(306deg);}
+.dash42{transform: rotate(312deg);}
+.dash43{transform: rotate(318deg);}
+.dash44{transform: rotate(324deg);}
+
+.dash45{transform: rotate(336deg);}
+.dash46{transform: rotate(342deg);}
+.dash47{transform: rotate(348deg);}
+.dash48{transform: rotate(354deg);}
+
+.clock--hour:nth-child(1){--rotation : 30deg;}
+.clock--hour:nth-child(2){--rotation : 60deg;}
+.clock--hour:nth-child(3){--rotation : 90deg;}
+.clock--hour:nth-child(4){--rotation : 120deg;}
+.clock--hour:nth-child(5){--rotation : 150deg;}
+.clock--hour:nth-child(6){--rotation : 180deg;}
+.clock--hour:nth-child(7){--rotation : 210deg;}
+.clock--hour:nth-child(8){--rotation : 240deg;}
+.clock--hour:nth-child(9){--rotation : 270deg;}
+.clock--hour:nth-child(10){--rotation : 300deg;}
+.clock--hour:nth-child(11){--rotation : 330deg;}
+.clock--hour:nth-child(12){--rotation : 360deg;}
+
+#second{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 38%;
+    border-radius:2px;
+    background-color: red;
+    top:0px;
+    left: calc(50% - 1px);
+    top: 12%;
+    /* animation: sec 60s infinite linear; */
+    animation: sec 60s steps(60,end) infinite ;
+    transform-origin: bottom;
+}
+
+
+#minute{
+    content: "";
+    width: 10px;
+    height: 32%;
+    background-color: yellow;
+    border-radius:5px;
+    position: absolute;
+    left: calc(50% - 3px);
+    top:18%;
+    animation: sec 3600s infinite linear;
+    transform-origin:bottom ;
+}
+
+#hour{
+    content: "";
+    width: 12px;
+    height: 21%;
+    background-color: lightgreen;
+    border-radius:9px;
+    position: absolute;
+    left: calc(50% - 5px);
+    top: 29%;
+    transform-origin: bottom;
+    animation: sec 43200s steps(60,end) infinite;
+    transform: rotate(-90deg);
+}
+
+@keyframes sec{
+    to{
+         transform: rotate(360deg);
+    }
+}
